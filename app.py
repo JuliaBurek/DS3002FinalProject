@@ -2,10 +2,8 @@ import os
 import requests
 import mysql.connector
 import json
-# from botocore.vendored import requests
 from datetime import datetime
 from chalice import Chalice
-# import urllib.request
 
 app = Chalice(app_name='DSProject')
 app.debug=True
