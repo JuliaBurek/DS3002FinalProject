@@ -1,4 +1,3 @@
-import os
 import requests
 import mysql.connector
 import json
@@ -18,8 +17,8 @@ def mysql_table(factor, pi, time):
     c = db.cursor()
     table = """INSERT INTO project (factor, pi, time) VALUES (%s, %s, %s)"""
     print(table)
-    names=(factor,pi,time)
-    c.execute(table,names)
+    names=(factor, pi, time)
+    c.execute(table, names)
     db.commit()
 
 @app.schedule('cron(0-59 * ? * * *)')
