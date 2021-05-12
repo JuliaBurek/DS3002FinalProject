@@ -25,5 +25,5 @@ def mysql_table(factor, pi, time):
 def cron_tab(event):
     response = requests.get('https://4feaquhyai.execute-api.us-east-1.amazonaws.com/api/pi')
     data = json.loads(response.text)
-    mysql_table(data['factor'],data['pi'],data['time'])
+    mysql_table(data['factor'], data['pi'], data['time'])
     print(data)
